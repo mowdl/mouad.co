@@ -1,56 +1,64 @@
+:root {
+  --bg-color: #0D100D;
+  --text-main-c: #A8A8A8;
+  --text-title-c: #FFFFFF;
+  --accent-color: #B78400;
+
+  --font-mono: "Ubuntu Mono", monospace;
+  --font: "Calistoga", serif;
+}
+
+
 body {
-  background-color: black;
-  margin: 5% 5%;
-  color: black;
-}
-
-/* h1 {
-  font-family: "Roboto Mono";
-  font-weight: 400;
-  font-size: 4vh;
-  color: #e6e6e6;
-  padding: 10% 10%;
-} */
-
-a {
-  text-decoration: none;
-}
-
-.h1Div {
-  width: 40vw;
-  height: 1vh;
-  margin: 1vh 0;
+  margin: 0;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
-  outline-color: black;
-  outline-width: 0.5vh;
-  outline-offset: -0.5vh;
-  outline-style: solid;
-  transition: 0.3s ease;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--text-main-c);
+  font-family: var(--font);
+  scroll-behavior: smooth;
 
-  font-family: "Roboto Mono";
-  font-weight: 200;
-  font-size: 2vh;
-  color: #e6e6e6;
-  padding: 5vh;
 }
 
-@media (orientation: portrait) {
-  .h1Div {
-    width: unset;
-    outline-color: rgb(20, 20, 20);
-  }
+.section {
+  padding-bottom: 50vh;
+  padding-top: 50vh;
+  text-align: left;
 }
 
-.h1Div:hover {
-  outline-color: #e6e6e6;
-  /* font-size: 2.2vh; */
-  letter-spacing: 0.05em;
+.title, .subtitle {
+  font-size: 3em;
+  margin: 0;
 }
 
-.all {
-  position: relative;
-  top: 30vh;
+.title {
+  color: var(--text-title-c);
+}
+
+
+nav {
+  position: absolute;
+  top: 20px;
+  font-family: var(--font-mono);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: var(--text-main-c)
+}
+
+.nav-number {
+  color: var(--accent-color);
 }
